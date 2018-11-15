@@ -6,8 +6,12 @@ app = Flask(__name__)
 Bootstrap(app)
 
 @app.route('/')
-def hello_world():
+def index_page():
     return render_template('index.html')
 
+@app.route('/login')
+def login_page():
+	return render_template('login.html')
+
 if __name__ == '__main__':
-	app.run(debug = True)
+	app.run(debug=True)
