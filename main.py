@@ -7,7 +7,8 @@ Bootstrap(app)
 
 @app.route('/')
 def index_page():
-    return render_template('index.html')
+    user = {'username': 'Monea'}
+    return render_template('index.html', title='Index Page', user=user)
 
 @app.route('/login')
 def login_page():
